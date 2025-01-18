@@ -225,44 +225,75 @@ nav ul li a {
 .pancake h2 {
     color: #ff6600;
 }
-.table-container {
-    width: 45%; 
-    margin-left: auto;
-    margin-right: 0;
-  }
-  
-  table {
-    width: 100%; 
-    border-collapse: collapse;
-    font-family: 'Caveat', cursive;
-  }
-  
-  th, td {
-    border: 0.3px solid #fff2bd; 
-    padding: 8px; 
-    text-align: left; 
-  }
-  
-ul, ol {
-    margin: 20px 0;
+/* Общий контейнер */
+.table-form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
 }
 
-form {
-    margin: 20px 0;
+/* Таблица и форма */
+.table-container, .form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 48%;
+}
+
+/* Таблица */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+}
+
+th, td {
+    border: 0.3px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Форма */
+.form-container form {
+    display: flex;
+    flex-direction: column;
 }
 
 form input, form textarea {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-form button {
-    padding: 10px 20px;
-    background-color: #ffcc00;
+/* Красивая кнопка */
+.custom-button {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
     border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-button:hover {
+    background: linear-gradient(45deg, #ff8e53, #ff6b6b);
+    transform: scale(1.05);
+}
+
+.custom-button:active {
+    transform: scale(0.95);
 }
 
 footer {
@@ -270,6 +301,9 @@ footer {
     padding: 20px;
     background-color: #ffcc00;
 }
+
+
+
 /* Адаптивність */
 @media (max-width: 1200px) {
     .container {

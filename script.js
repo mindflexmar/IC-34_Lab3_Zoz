@@ -83,3 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
         cartModal.style.display = cartModal.style.display === "block" ? "none" : "block";
     };
 });
+
+
+
