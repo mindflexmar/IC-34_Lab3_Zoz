@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про нас - Pancakes in heaven</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <style>
+
+        .about-us {
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 20px auto;
+            padding: 30px;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-us h2 {
+            font-size: 2em;
+            color: #663300;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about-us p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .about-us h3 {
+            font-size: 1.5em;
+            color: #cc6600;
+            margin-top: 30px;
+        }
+
+        #map iframe {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="centered-title">Pancakes in heaven</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="aboutus.html">Про нас</a></li>  
+            </ul>
+            <div class="search-menu">
+                <input type="text" placeholder="Пошук...">
+                <div class="cart-icon" onclick="toggleCart()">
+                    🛒 <span id="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <section class="about-us">
+        <h2>Про нас</h2>
+        <p>Ми - команда, яка обожнює панкейки! У нас ви знайдете найсмачніші панкейки на світі, приготовані з любов'ю та найкращих інгредієнтів. Ми постійно вдосконалюємо свої рецепти, щоб ви могли насолоджуватися чудовими смаколиками кожного разу!</p>
+        
+        <h3>Наша місія</h3>
+        <p>Наша мета - зробити ваші ранки ще смачнішими і приємнішими, даруючи вам найкращі панкейки з різноманітними начинками та добавками. Ми прагнемо створити затишну атмосферу, де кожен гість почуватиметься як вдома.</p>
+
+        <h3>Знайдіть нас на карті</h3>
+        <div id="map">
+            <!-- Вбудована Google карта -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.123574803217!2d30.511050215102296!3d50.44150112247784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce385bdca7c9%3A0xd7c16be7b82a0865!2sNational%20Technical%20University%20of%20Ukraine%20%E2%80%9CKyiv%20Polytechnic%20Institute%20Named%20After%20Igor%20Sikorsky%22!5e0!3m2!1sen!2sua!4v1674051186992!5m2!1sen!2sua" 
+                width="100%" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pancakes in heaven. Всі права захищені.</p>
+    </footer>
+</body>
+</html>

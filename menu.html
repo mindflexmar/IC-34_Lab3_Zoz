@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню млинців</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <header>
+        <h1 class="centered-title">Pancakes in heaven</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="aboutus.html">Про нас</a></li>
+            </ul>
+            <div class="search-menu">
+                <input type="text" placeholder="Пошук...">
+                <div class="cart-icon" onclick="toggleCart()">
+                    🛒 <span id="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content">
+            <h2>Наше меню</h2>
+
+            <!-- Секція Солоних Млинців -->
+            <h2>Солоні млинці</h2>
+            <section class="pancake-section">
+                <div class="pancake">
+                    <img src="images/млинці5.jpg" alt="Млинець з шинкою і сиром">
+                    <h2>Млинець з шинкою і сиром</h2>
+                    <p>Апетитний млинець з ніжною шинкою та розплавленим сиром – ідеальний вибір для сніданку або перекусу.</p>
+                    <div class="button-container">
+                        <button type="button" class="order-button">Замовити</button>
+                    </div>
+                </div>
+                <div class="pancake">
+                    <img src="images/1200_0_1604392155-9010.webp" alt="Млинець з грибами">
+                    <h2>Млинець з грибами</h2>
+                    <p>Соковиті гриби в ніжному соусі, загорнуті в золотистий млинець – справжня насолода для гурманів!</p>
+                    <div class="button-container">
+                        <button type="button" class="order-button">Замовити</button>
+                    </div>
+                </div>
+                <div class="pancake">
+                    <img src="images/mlintsi-z-lososiem-основне-фото-рецепта.jpg" alt="Млинець з лососем і вершковим сиром">
+                    <h2>Млинець з лососем і вершковим сиром</h2>
+                    <p>Витончене поєднання слабосоленого лосося та ніжного вершкового сиру створює неперевершений смак.</p>
+                    <div class="button-container">
+                        <button type="button" class="order-button">Замовити</button>
+                    </div>
+                </div>
+                <div class="pancake">
+                    <img src="images/ap4wyq---c1905x884x50px50p-up--4ffa2eb635fbd286068e88ca13eaac87.jpg" alt="Млинець зі шпинатом і фетою">
+                    <h2>Млинець зі шпинатом і фетою</h2>
+                    <p>Корисний і смачний варіант для любителів здорової їжі – свіжий шпинат і солона фета в ідеальному поєднанні.</p>
+                    <div class="button-container">
+                        <button type="button" class="order-button">Замовити</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Секція Солодких Млинців -->
+            <h2>Солодкі млинці</h2>
+            <section class="pancake-section">
+                <div class="pancake" data-name="Банановий рай" data-price="154" data-description="Апетитний млинець з бананами">
+                    <img src="images/2d91e2099f0ed72d55a8be5807108b5e.jpg" alt="Бананові панкейки">
+                    <h2>Банановий рай</h2>
+                    <p>Це справжня подорож у світ ніжного аромату стиглих бананів. Дозвольте собі маленьку подорож у тропічний рай прямо на тарілці.</p>
+                    <div class="button-container">
+                        <button type="button" class="order-button">Замовити</button>
+                    </div>
+                </div>
+                <div class="pancake" data-name="Малиновий мрійник" data-price="144" data-description="Апетитний млинець з малиною">
+                    <img src="images/pankeiki-na-moloke-s-yaicom-sodoi-i-limonnoi-kislotoi_1614588187_8_max.jpg" alt="Малинові панкейки">
+                    <h2>Малиновий мрійник</h2>
+                    <p>Уявіть, як малинові хвилі огортають ваші смакові рецептори, даруючи відчуття солодкого польоту.</p>
+                    <div class="button-container">
+                        <button type="button" class="order-button">Замовити</button>
+                    </div>
+                </div>
+                <div class="pancake" data-name="Класичні панкейки" data-price="120" data-description="Справжня класика, яка не вийде з моди!">
+                    <img src="images/image.jpg" alt="Класичні панкейки">
+                    <h2>Класичні панкейки</h2>
+                    <p>Справжня класика, яка приносить відчуття домашнього тепла з першого шматочка.</p>
+                    <div class="button-container">
+                        <button type="button" class="order-button">Замовити</button>
+                    </div>
+                </div>
+                <div class="pancake" data-name="Nutella Delight" data-price="120" data-description="Соковиті панкейки з Nutella">
+                    <img src="images/pankeiki_s_nachinkoi-245877.jpg" alt="З начинкою Nutella панкейки">
+                    <h2>Nutella Delight</h2>
+                    <p>Соковиті панкейки з щедрою начинкою Nutella створюють ідеальну гармонію смаку.</p>
+                    <div class="button-container">
+                        <button type="button" class="order-button">Замовити</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Модальне вікно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-name"></h2>
+            <p id="modal-description"></p>
+            <p><strong>Ціна:</strong> <span id="modal-price"></span> грн</p>
+            <button id="add-to-cart">Додати до кошика</button>
+        </div>
+    </div>
+
+    <!-- Кошик -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="toggleCart()">&times;</span>
+            <h2>Ваш кошик</h2>
+            <ul id="cart-list"></ul>
+            <p><strong>Загальна сума:</strong> <span id="total-price">0</span> грн</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

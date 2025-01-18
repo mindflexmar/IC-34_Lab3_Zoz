@@ -11,23 +11,37 @@
         <h1 class="centered-title">Pancakes in heaven</h1>
         <nav>
             <ul>
-                <li><a href="#home">Головна</a></li>
-                <li><a href="#menu">Меню</a></li>
-                <li><a href="#aboutus">Про нас</a></li>  
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="aboutus.html">Про нас</a></li>  
             </ul>
             <div class="search-menu">
                 <input type="text" placeholder="Пошук...">
-                <button class="menu-icon">&#9776;</button>
+                <div class="cart-icon" onclick="toggleCart()">
+                    🛒 <span id="cart-count">0</span>
+                </div>
             </div>
         </nav>
 
     </header>
-
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+    </script>
 <main>
     <div class="content"> 
         <h2>Популярні панкейки </h2>
         <section class="pancake-section">
-            <div class="pancake">
+            <div class="pancake" data-name="Млинець з шинкою і сиром" data-price="120" data-description="Апетитний млинець з шинкою та сиром">
+                <img src="images/млинці5.jpg" alt="Млинець з шинкою і сиром">
+                <h2>Млинець з шинкою і сиром</h2>
+                <p>Апетитний млинець з ніжною шинкою та розплавленим сиром – ідеальний вибір для сніданку.</p>
+                <div class="button-container">
+                    <button type="button" class="order-button">Замовити</button>
+                </div> 
+            </div>
+            <div class="pancake"data-name="Банановий рай" data-price="154" data-description="Апетитний млинець з шинкою та сиром">
                 <img src="images/2d91e2099f0ed72d55a8be5807108b5e.jpg" alt="Бананові панкейки">
                 <h2>Банановий рай</h2>
                 <p>Це справжня подорож у світ ніжного аромату стиглих бананів, 
@@ -42,7 +56,7 @@
                 </div> 
             </div>
             
-            <div class="pancake">
+            <div class="pancake" data-name="Малиновий мрійник" data-price="144" data-description="Апетитний млинець з малиною ">
                 <img src="images/pankeiki-na-moloke-s-yaicom-sodoi-i-limonnoi-kislotoi_1614588187_8_max.jpg" alt="Малинові панкейки">
                 <h2>Малиновий мрійник</h2>
                 <p>Уявіть, як мрійливі малинові хвилі огортають ваші смакові рецептори, даруючи відчуття солодкого польоту та невимовної насолоди.
@@ -52,7 +66,7 @@
                         <button type="button" class="order-button">Замовити</button>
                     </div> 
             </div>
-            <div class="pancake">
+            <div class="pancake" data-name="Класичні панкейки" data-price="120" data-description="Справжня класика, яка не вийде з моди! Пухкі, золотисті">
                 <img src="images/image.jpg" alt="Класичні панкейки">
                 <h2>Класичні панкейки</h2>
                 <p>Справжня класика, яка не вийде з моди! Пухкі, золотисті, та ніжні, вони приносять відчуття домашнього тепла з першого шматочка. 
@@ -63,7 +77,7 @@
                         <button type="button" class="order-button">Замовити</button>
                     </div> 
             </div>
-            <div class="pancake">
+            <div class="pancake" data-name="Nutella Delight" data-price="120" data-description="Соковиті панкейки з щедрою начинкою улюбленою Nutella">
                 <img src="images/pankeiki_s_nachinkoi-245877.jpg" alt="З начинкою нутеллою панкейки">
                 <h2>Nutella Delight</h2>
                 <p>Представляємо вам справжню насолоду – наші панкейки Nutella Delight! Соковиті панкейки з щедрою начинкою улюбленою Nutella, створюють ідеальну гармонію смаку. 
@@ -150,5 +164,30 @@
     <footer>
         <p>© 2024 Pancakes in heaven. Всі права захищені.</p>
     </footer>
+
+    <!-- Модальне вікно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-name"></h2>
+            <p id="modal-description"></p>
+            <p><strong>Ціна:</strong> <span id="modal-price"></span> грн</p>
+            <button id="add-to-cart">Додати до кошика</button>
+        </div>
+    </div>
+
+       <!-- Кошик -->
+       <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="toggleCart()">&times;</span>
+            <h2>Ваш кошик</h2>
+            <ul id="cart-list"></ul>
+            <p><strong>Загальна сума:</strong> <span id="total-price">0</span> грн</p>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
 </body>
 </html>
